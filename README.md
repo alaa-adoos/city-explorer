@@ -5,17 +5,25 @@
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+### the application is for searching on maps and give the user the city that he looking for by API
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+### need to install the libraries of  API and read the documnetions.
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+- bootsrap for design the style
+- react javascript to requset the data
+- API libarie to response  the data
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example: -->
+- 08-28-2022 6:00pm  start react and bulid the components 
+- 08-28-2022 7:00pm  finsh all the bootstrap desin. 
+- 08-28-2022 8:00pm-11:00  starting coding javascript.
+- 08-28-2022 11:42pm - Application now has a fully-functional express server, with a GET route for the location resource. 
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+[document](https://locationiq.com/docs)

@@ -12,7 +12,9 @@ class City extends React.Component{
           display_name:'',
           lat:'',
           long:' ' ,
-          find:false
+          find:false,
+          flag:false
+
         }
     }
     LookingForCity =async (e)=>{
@@ -27,7 +29,8 @@ class City extends React.Component{
             display_name:result.data[0].display_name,
             lat:result.data[0].lat,
             long:result.data[0].lon,
-            find:true
+            find:true,
+            flag:true
         })
        
 }
@@ -40,11 +43,11 @@ catch{
 
     render(){
         return(
-<>
+<><div class="w-25 p-3">
             <Form onSubmit={this.LookingForCity}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Enter yout city</Form.Label>
-              <Form.Control type="text" placeholder="lets go" name="city" />
+              <Form.Control type="text" placeholder="lets go" name="city" class="mb-3"/>
             </Form.Group>
       
             <Button variant="primary" type="submit">
@@ -52,11 +55,15 @@ catch{
             </Button>
           </Form>
           {this.state.find &&
-          <h1>we find the city that you are looking for!</h1>}
+          <h1>We find it ✌️✌️</h1>}
+          {this.state.flag &&
+          <img src={`https://maps.locationiq.com/v3/staticmap?key=pk.0b303c30bbc00eb6cbd73e2dba4d22a5&center=${this.state.lat},${this.state.long}&zoom=7`}></img>}
           
           <p>{this.state.display_name}</p>
           <h3>lat:{this.state.lat}</h3>
           <h3>long:{this.state.long}</h3>
+          </div>
+
    
           </>
         )

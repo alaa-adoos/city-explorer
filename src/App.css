@@ -1,6 +1,12 @@
 
+.head{
+  text-align: center;
+}
 .App {
   text-align: center;
+}
+.footer{
+  background-color: red;
 }
 
 .App-logo {
