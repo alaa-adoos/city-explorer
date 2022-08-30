@@ -1,6 +1,6 @@
 
+![web request-response cycle](./src/images/lab06.png)
 
-[web request-response cycle](https://lucid.app/lucidchart/0095fd4c-557e-4031-9f83-a771c6266e90/edit?viewport_loc=-11%2C256%2C1472%2C692%2C0_0&invitationId=inv_df47d9c6-424b-43a6-9dd7-92dfa6246b1a#)
 # City explorer -lab06
 
 **Author**:Alaa abualadoos
