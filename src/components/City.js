@@ -20,7 +20,7 @@ class City extends React.Component{
     LookingForCity =async (e)=>{
         e.preventDefault();
         const cityName=e.target.city.value;
-        const Key='pk.0b303c30bbc00eb6cbd73e2dba4d22a5';
+        const Key=process.env.REACT_APP_API_KEY;
         const URL=` https://us1.locationiq.com/v1/search?key=${Key}&q=${cityName}&format=json`
         try{
         const result= await axios.get(URL);
