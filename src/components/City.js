@@ -57,7 +57,7 @@ catch{
           {this.state.find &&
           <h1>We find it ✌️✌️</h1>}
           {this.state.flag &&
-          <img alt="hi" src={`https://maps.locationiq.com/v3/staticmap?key=pk.0b303c30bbc00eb6cbd73e2dba4d22a5&center=${this.state.lat},${this.state.long}&zoom=7`}></img>}
+          <img alt="hi there" src={`https://maps.locationiq.com/v3/staticmap?key=pk.0b303c30bbc00eb6cbd73e2dba4d22a5&center=${this.state.lat},${this.state.long}&zoom=7`}></img>}
           
           <p>{this.state.display_name}</p>
           <h3>lat:{this.state.lat}</h3>
