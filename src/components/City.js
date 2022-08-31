@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from "axios";
-
+import Weather from "./Weather";
 
 class City extends React.Component{
     constructor(props){
@@ -13,24 +13,29 @@ class City extends React.Component{
           lat:'',
           long:' ' ,
           find:false,
-          flag:false
-
+          flag:false,
+          wheatherState: {},
         }
     }
     LookingForCity =async (e)=>{
         e.preventDefault();
+        try{
         const cityName=e.target.city.value;
         const Key=process.env.REACT_APP_API_KEY;
         const URL=` https://us1.locationiq.com/v1/search?key=${Key}&q=${cityName}&format=json`
-        try{
+        
+       
         const result= await axios.get(URL);
-
+        const weatherUrl=`https://weather-api146.herokuapp.com/weather?Latitude=${result.data[0].lat}&Longitude=${result.data[0].lon}&searchQuery=${cityName}`
+        let weatherObject = await axios.get(weatherUrl);
+        console.log(weatherObject.data[0]);
         this.setState({
             display_name:result.data[0].display_name,
             lat:result.data[0].lat,
             long:result.data[0].lon,
             find:true,
-            flag:true
+            flag:true,
+           wheatherState:weatherObject.data[0]
         })
        
 }
@@ -62,6 +67,7 @@ catch{
           <p>{this.state.display_name}</p>
           <h3>lat:{this.state.lat}</h3>
           <h3>long:{this.state.long}</h3>
+          <Weather sweather={this.state.wheatherState}/>
           </div>
 
    
